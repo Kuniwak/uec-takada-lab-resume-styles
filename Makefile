@@ -6,11 +6,11 @@ BIBTEX = jbibtex
 DVIPDFMX = dvipdfmx
 
 all:
-	$(LATEX) -halt-on-error $(SOURCE).tex | nkf --ic=e --oc=w
-	$(BIBTEX) main | nkf --ic=e --oc=w
-	$(LATEX) $(SOURCE).tex | nkf --ic=e --oc=w
-	$(LATEX) $(SOURCE).tex | nkf --ic=e --oc=w
-	$(DVIPDFMX) $(SOURCE).dvi | nkf --ic=e --oc=w
+	$(LATEX) -halt-on-error $(SOURCE).tex | nkf -u
+	$(BIBTEX) main | nkf -u
+	$(LATEX) -halt-on-error $(SOURCE).tex | nkf -u
+	$(LATEX) -halt-on-error $(SOURCE).tex | nkf -u
+	$(DVIPDFMX) $(SOURCE).dvi | nkf -u
 
 pdf:
 	$(DVIPDFMX) $(SOURCE).dvi
@@ -19,4 +19,4 @@ open:
 	open $(SOURCE).pdf
 
 clean:
-	rm -f *~ $(SOURCE).dvi $(SOURCE).idx *.aux *.log *.lot *.lof *.toc *.bbl *.blg 
+	rm -f *~ $(SOURCE).dvi $(SOURCE).idx *.aux *.log *.lot *.lof *.toc *.bbl *.blg *.aux
