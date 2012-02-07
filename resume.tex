@@ -1,9 +1,9 @@
 \documentclass[twoside]{jarticle}
 
-\usepackage{graphicx}
-\usepackage{fancybox} 
-\usepackage{ascmac}
-\usepackage{amsmath}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{epsfig}
+\usepackage{tabularx}
+\usepackage{amssymb}
 \usepackage{url}
 
 \setlength{\abovedisplayskip}{-2pt}
@@ -19,12 +19,64 @@
 \addtolength{\topmargin}{15mm}      % 上マージン
 \addtolength{\oddsidemargin}{20mm}  % 1ページ目の左マージン
 \addtolength{\evensidemargin}{10mm} % 2ページ目の左マージン
-%%\pagestyle{empty}  % ページ番号なし
 
+% 研究情報
 \input{info.def}
 
 %%%% ページ番号　自分の学籍番号-ページ数 %%%%
 \renewcommand{\thepage}{\studentnumber-\arabic{page}}
+
+% Refer: http://www.nsknet.or.jp/~tony/TeX/faq/layout.htm
+%
+% DVI ORIGIN: 1in, 1in from top left point of page
+% (1) : topmargin
+% (2) : headheight
+% (3) : headsep
+% (4) : oddsidemargin|evensidemargin
+% (5) : textwidth
+% (6) : textheight
+% (7) : marginparwidth
+% (8) : marginparsep
+% (9) : footskip
+% (10): linewidth
+% (11): columnsep
+% (12): columnseprule
+%
+% +------------------------------------------+
+% |  :(DVI ORIGIN)                           |
+% + -@- - - - - - - - - - - - - - - - - - - -|
+% |  :     :(1)                              |
+% |  :   +-+----------------------+          |
+% |  :   | :(2)   H E A D E R     |          |
+% |  :   +-+----------------------+          |
+% |  :     :(3)                       P A R  |
+% |  :   +-+----------------------+   +---+  |
+% |  :   |                    :   |   |   |  |
+% |  :   |<-(5)- - - - - - - -:- >| ->|(7)|<-|
+% |  :   |                    :   |   |   |  |
+% |  :   |                    :   |   |   |  |
+% |->:(4)|<-                  : ->|(8)|<- |  |
+% |  :   |                    :   |   |   |  |
+% |  :   |                   (6)  |   |   |  |
+% |  :   |                    :   |   |   |  |
+% |  :   :                    :   :   :   :  |
+% |  :   :        :  :  :     :   :   :   :  |
+% |  :   |        |  |  |     :   |   |   |  |
+% |  :   |<-(10)->|  |  |     :   |   |   |  |
+% |  :   |        |  |  |     :   |   |   |  |
+% |  :   |        |  |  |     :   |   |   |  |
+% |  :   |  (11)->|  |  |<-   :   |   |   |  |
+% |  :   |        |  |  |     :   |   |   |  |
+% |  :   |        |  |  |     :   |   |   |  |
+% |  :   |        |->|<- (12) :   |   |   |  |
+% |  :   |        |  |  |     :   |   |   |  |
+% |  :   +-+------+     +---------+   +---+  |
+% |  :     :(9)                              |
+% |  :   +-:----------------------+          |
+% |  :   | :     F O O T E R      |          |
+% |  :   +-+----------------------+          |
+% |  :                                       |
+% +------------------------------------------+
 
 %%%% sectionやsubsectionの上下の間隔 基本変えない %%%%%
 \makeatletter
@@ -32,7 +84,6 @@
    {1.0\Cvs \@plus.5\Cdp \@minus.2\Cdp}%
    {.5\Cvs \@plus.3\Cdp}%
    {\reset@font\large\bfseries}}
-%sectionの幅の変更
 \renewcommand{\subsection}{\@startsection{subsection}{2}{\z@}%
    {1.0\Cvs \@plus.5\Cdp \@minus.2\Cdp}%
    {.25\Cvs \@plus.3\Cdp}%
@@ -40,10 +91,10 @@
 \makeatother
 
 %%% 行間の変更（1.0で標準，1.0以下でより狭く，1.0以上でより広く）
-\renewcommand{\baselinestretch}{0.75} %0.80が通常みたい
+\renewcommand{\baselinestretch}{0.80} %0.80が通常みたい
 % \renewcommand{\baselinestretch}{1} 
 %%%% 表の行間の変更(1.0で標準，1.0以下でより狭く，1.0以上でより広く) %%%%
-\renewcommand{\arraystretch}{0.7}
+\renewcommand{\arraystretch}{1.0}
 
 %%%% 図や表（フロートと言う）の設定 %%%%
 \setlength{\floatsep}{12pt plus 2pt minus 2pt}      % ページ上部あるいは下部に出力されるフロートとフロートの間の距離
@@ -54,18 +105,19 @@
 
 \begin{document}
 \twocolumn[%
+	% 表題
 	\input{title}
 ]
 
+% 本文
 \input{body}
 
-\begin{thebibliography}{aa}
-\bibitem{ipsj-thesisformat}
-OO XXX,OO YY,ABC：くぁｗせｄｒｆｔｇｙふじこｌｐ,OO AAA XX conference jounal, Vol.0, No.0, pp.0-0 (2022).
-\bibitem{Findlater:2011}
-    XX BB：ｐおぃくｊｙｈｔｇｒふぇｄｗｓくぁ,元禄22年度逓信工学科卒業論文(1880).
-
-\end{thebibliography}
+% 参考文献
+% アルファベット順にソート
+%\bibliographystyle{plain}
+% 出現順にソート
+\bibliographystyle{unsrt}
+\bibliography{bibtex}
 
 \end{document}
 
