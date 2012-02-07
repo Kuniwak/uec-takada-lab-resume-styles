@@ -2,12 +2,12 @@ SOURCE = resume
 # LATEX = platex-sjis
 LATEX = platex
 # BIBTEX = bibtex
-BIBTEX = jbibtex
+BIBTEX = bibtex
 DVIPDFMX = dvipdfmx
 
 all:
 	$(LATEX) -halt-on-error $(SOURCE).tex | nkf -u
-	$(BIBTEX) main | nkf -u
+	$(BIBTEX) $(SOURCE) | nkf -u
 	$(LATEX) -halt-on-error $(SOURCE).tex | nkf -u
 	$(LATEX) -halt-on-error $(SOURCE).tex | nkf -u
 	$(DVIPDFMX) $(SOURCE).dvi | nkf -u
