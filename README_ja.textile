@@ -13,6 +13,13 @@ Makefileでは以下のソフトウェアを利用しています.
 
 したがって，"Make"コマンドによるTeXコンパイルを行いたい場合は上記のソフトウェアを事前にインストールしておく必要があります.
 
+h2. 手引き
+
+- info.def，body.tex，bibtex.bibを変更します
+- 端末上でmakeしてください
+
+※ make するときは作業ディレクトリをMakefileのあるディレクトリに移しておいてください
+
 h2. 動作確認
 
 * DELL OPTIPLEX GX520/Ubuntu 10.04 LTS.

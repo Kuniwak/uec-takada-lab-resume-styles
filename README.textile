@@ -1,6 +1,6 @@
 h1. "AnZen-Lab (UEC, Tokyo)":http://www.az.inf.uec.ac.jp/  Thesis Styles(TeX+BibTeX)
 
-LaTeX style formats, samples and utilities. 
+LaTeX style formats, samples and utilities. And using BibTeX to management referencies.
 These file encoding is EUC-JP.
 
 h2. Requirements
@@ -12,6 +12,10 @@ Makefile uses above software.
 * dvipdfmx
 
 So if you want to use "Make" command, you have to install there software before using.
+
+h2. HowTo
+
+- Modify info.def, body.tex, bibtex.bib
 
 h2. Tested
 
