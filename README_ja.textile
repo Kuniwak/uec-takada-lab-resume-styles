@@ -15,8 +15,8 @@ Makefileでは以下のソフトウェアを利用しています.
 
 h2. 手引き
 
-- info.def，body.tex，bibtex.bibを変更します
-- 端末上でmakeしてください
+# info.def，body.tex，bibtex.bibを変更します
+# 端末上でmakeしてください
 
 ※ make するときは作業ディレクトリをMakefileのあるディレクトリに移しておいてください
 

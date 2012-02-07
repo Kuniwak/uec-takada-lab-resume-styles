@@ -15,7 +15,10 @@ So if you want to use "Make" command, you have to install there software before 
 
 h2. HowTo
 
-- Modify info.def, body.tex, bibtex.bib
+# Modify info.def, body.tex, bibtex.bib
+# Execute "make"  on Terminal.
+
+You may have to change current directory to a directory including "Makefile".
 
 h2. Tested
 
