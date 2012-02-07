@@ -26,6 +26,7 @@ h2. 動作確認
 * dvipdfmx-20090708
 
 h2. 謝辞
+
 このスタイルファイルのオリジナル版は香月 研（電気通信大学 内海 研究室）さんからいただきました．
 
 p=. Written by "Yuki Kokubun":mailto:uec.takada.lab@hotmail.co.jp

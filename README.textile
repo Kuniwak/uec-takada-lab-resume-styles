@@ -26,6 +26,7 @@ h2. Tested
 * dvipdfmx-20090708
 
 h2. Acknowledgment
+
 I would also thanks to Ken Katsuki(Utsumi Lab, UEC Tokyo), who gave me a original style file.
 
 p=. Written by "Yuki Kokubun":mailto:uec.takada.lab@hotmail.co.jp
