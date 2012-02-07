@@ -21,8 +21,10 @@
 \addtolength{\evensidemargin}{10mm} % 2ページ目の左マージン
 %%\pagestyle{empty}  % ページ番号なし
 
+\input{info.def}
+
 %%%% ページ番号　自分の学籍番号-ページ数 %%%%
-\renewcommand{\thepage}{0111111-\arabic{page}}
+\renewcommand{\thepage}{\studentnumber-\arabic{page}}
 
 %%%% sectionやsubsectionの上下の間隔 基本変えない %%%%%
 \makeatletter
@@ -48,19 +50,11 @@
 \setlength{\textfloatsep}{1pt plus 2pt minus 4pt}  % ページ上部のフロートと本文,および本文とページ下部のフロートとの距離
 \setlength{\intextsep}{12pt plus 2pt minus 2pt}	    % ページの途中に出力されるフロートとその前後の本文との距離
 
-
+\input{jdummy.def}
 
 \begin{document}
 \twocolumn[%
- \begin{center}
-平成23年度　システム工学科卒業研究論文発表要旨\par\vskip5mm
-{\Large\bf 平成２１年度システム工学科卒業論文発表会用の要旨作成にあたって}\par\vskip3mm  %論文題目（長いときには改行する）
-\begin{tabular}{r@{\hspace*{1zw}}l}
-発表者： & **システム工学講座 \hspace*{1zw} 0123456 \hspace*{1ex} 電通 太郎\\  %学籍番号と氏名
-指導教員： & OO XX 教授\\
-\end{tabular}
-\end{center}
-\vskip3mm
+	\include{title}
 ]
 
 %%%% 以下に，本文を書く．%%%%

@@ -1,0 +1,12 @@
+% 発表年度
+\def\presentationdate{平成23年度}
+% 論文題目（長いときには改行する）
+\def\title{平成21年度システム工学科卒業論文発表会用の要旨作成にあたって}
+% 講座名
+\def\cource{＊＊システム工学講座}
+% 学生番号
+\def\studentnumber{0123456}
+% 氏名
+\def\studentname{電通 太郎}
+% 指導教員名
+\def\tutor{OO XX 教授}
