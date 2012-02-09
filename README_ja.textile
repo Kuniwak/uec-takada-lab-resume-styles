@@ -1,4 +1,4 @@
-h1. "AnZen-Lab (UEC, Tokyo)":http://www.az.inf.uec.ac.jp/  論文スタイル(TeX+BibTeX)
+h1. "AnZen-Lab (UEC, Tokyo)":http://www.az.inf.uec.ac.jp/  要旨スタイル(TeX+BibTeX)
 
 LaTeXのスタイルファイル，サンプル，TeXコンパイルのためのユーティリティです.
 また，これらのファイルはEUC-JPで記述されています.
