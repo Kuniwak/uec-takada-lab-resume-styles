@@ -1,4 +1,4 @@
-h1. "AnZen-Lab (UEC, Tokyo)":http://www.az.inf.uec.ac.jp/  Thesis Styles(TeX+BibTeX)
+h1. "AnZen-Lab (UEC, Tokyo)":http://www.az.inf.uec.ac.jp/  Resume Styles(TeX+BibTeX)
 
 LaTeX style formats, samples and utilities. And using BibTeX to management referencies.
 These file encoding is EUC-JP.
